@@ -19,10 +19,10 @@ jobs:
 
       - name: Grab Link
 
-        run: |
-          git config --global user.email "dp247@hll.localhost"
-          git config --global user.name "dp247"
+                run: |
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git config --global user.name "github-actions[bot]"
           chmod +x exec_grabber.sh && ./exec_grabber.sh
-          git add -A
-          git commit -m "./youtubeLink.txt is updated."
+          git add youtube.m3u8
+          git commit -m "Update youtube.m3u8 links" || echo "No changes to commit"
           git push
